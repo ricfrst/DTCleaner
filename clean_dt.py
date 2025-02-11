@@ -74,4 +74,4 @@ def cleanitup():
 
 
 cleanitup()
-print(f"Cleaning complete! Log file saved at: {logs}")
+print(f"Cleaning complete! Logs saved at: {logs}")
