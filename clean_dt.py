@@ -1,7 +1,15 @@
 import os
 import shutil
+import logging
 from pathlib import Path
 
+#log setup
+logs = Path.home() / "Documents" / "DTCleaner.log" #saved location
+logging.basicConfig(
+    filename= logs, # where to store
+    level=logging.INFO,# INFO WARNING ERROR CRITICAL NODEBUG
+    format="%(levelname)s - %(message)s"
+)
 
 
 #defining extensions
@@ -29,13 +37,13 @@ print(f"The path in question : {dt_path}")
 def move (file_path, dst_path):
     destination = dst_path / file_path.name
     shutil.move(file_path, destination)
-    print(f"sent to {destination}, {file_path.name}")
+    logging.info(f"Moved: {file_path} → {destination}")
 
 
 #function to delete
 def dump (file_path):
     file_path.unlink()
-    print(f"sent to shadow realm, {file_path.name}")
+    logging.info(f"dumped {file_path}")
 
 
 #file sorting
@@ -49,8 +57,11 @@ def sorter (file_path):
         move(file_path, documents)
     elif cur_extension == shortcut_extension:
         dump(file_path)
+        print(f"DUMPED ::  {file_path.name}")
     else:
         dump(file_path)
+        print(f"DUMPED ::  {file_path.name}")
+
 
 
 def cleanitup():
@@ -63,3 +74,4 @@ def cleanitup():
 
 
 cleanitup()
+print(f"Cleaning complete! Log file saved at: {logs}")
