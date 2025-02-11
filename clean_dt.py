@@ -71,6 +71,11 @@ def cleanitup():
         elif item.is_dir():
             destination = documents / item.name
             shutil.move(str(item),str(destination))
+            # Check if the folder is empty after moving
+            if not any(destination.iterdir()):  # If folder is empty, delete it
+                destination.rmdir()
+                logging.info(f"DUMPED EMPTY FOLDER: {destination}")
+                print(f"Deleted empty folder :: {destination}")
 
 
 cleanitup()
