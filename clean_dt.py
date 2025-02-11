@@ -61,27 +61,5 @@ def cleanitup():
             destination = documents / item.name
             shutil.move(str(item),str(destination))
 
-###list dt items
 
-#for item in dt_path.iterdir():
- #   if item.is_dir():
-  #      print(f"FOLDER {item} (ignored for now)")
-   #     shutil.move(str(item), str(documents))
-    #elif item.is_file():
-     #   file_extension = item.suffix.lower()  # Get the file extension and make it lowercase
-
-      #  if file_extension in img_extensions:
-       #     print(f"Moved to Pictures folder ::  {item}")
-        #    shutil.move(str(item), str(pictures))
-
-        #elif file_extension in doc_extensions:
-         #   print(f"Move to Documents folder ::  {item}")
-          #  shutil.move(str(item), str(documents))
-
-        #elif file_extension == shortcut_extension:
-         #   print(f"Delete ::  {item}")
-          #  item.unlink()
-        #else:
-         #   print(f"MISC FILE TYPE - DELETED ::  {item}| Extension:{file_extension}")
-          #  item.unlink()
-
+cleanitup()
