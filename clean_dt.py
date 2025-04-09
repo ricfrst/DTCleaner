@@ -20,6 +20,7 @@ shortcut_extension = ".lnk"
 
 
 #define destinations
+#redefined APRIL
 pictures = Path.home() / "Pictures"
 documents = Path.home() / "Documents"
 #get desktop path
