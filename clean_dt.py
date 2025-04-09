@@ -27,8 +27,8 @@ dt_path = Path.home()/"Desktop"
 
 
 
-#string to print
-#f to replace path var with actual path name, just easier to read
+#string -> print
+#f -> replace path var with actual path name, just easier to read
 print(f"The path in question : {dt_path}")
 
 
@@ -40,7 +40,7 @@ def move (file_path, dst_path):
     logging.info(f"Moved: {file_path} → {destination}")
 
 
-#function to delete
+#delete fn
 def dump (file_path):
     file_path.unlink()
     logging.info(f"dumped {file_path}")
