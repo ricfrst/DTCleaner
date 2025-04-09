@@ -6,7 +6,7 @@ from pathlib import Path
 #log setup
 logs = Path.home() / "Documents" / "DTCleaner.log" #saved location
 logging.basicConfig(
-    filename= logs, # where to store
+    filename= logs, #where to store
     level=logging.INFO,# INFO WARNING ERROR CRITICAL NODEBUG
     format="%(levelname)s - %(message)s"
 )
@@ -20,12 +20,11 @@ shortcut_extension = ".lnk"
 
 
 #define destinations
-
 pictures = Path.home() / "Pictures"
 documents = Path.home() / "Documents"
 #get desktop path
 dt_path = Path.home()/"Desktop"
-#altered by kea, 4/9
+
 
 
 #string to print
