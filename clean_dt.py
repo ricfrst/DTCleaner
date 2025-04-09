@@ -20,7 +20,7 @@ shortcut_extension = ".lnk"
 
 
 #define destinations
-#redefined APRIL
+#unchanged as of4/9
 pictures = Path.home() / "Pictures"
 documents = Path.home() / "Documents"
 #get desktop path
