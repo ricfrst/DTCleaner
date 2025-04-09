@@ -3,11 +3,11 @@ import shutil
 import logging
 from pathlib import Path
 
-#log setup
+#LOG SETUP DO NOT TOUCH
 logs = Path.home() / "Documents" / "DTCleaner.log" #saved location
 logging.basicConfig(
     filename= logs, #where to store
-    level=logging.INFO,# INFO WARNING ERROR CRITICAL NODEBUG
+    level=logging.INFO,#INFO WARNING ERROR CRITICAL NODEBUG
     format="%(levelname)s - %(message)s"
 )
 
