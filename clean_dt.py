@@ -33,7 +33,7 @@ print(f"The path in question : {dt_path}")
 
 
 
-#function to move file
+#function to move file *UPDATE LOGS*
 def move (file_path, dst_path):
     destination = dst_path / file_path.name
     shutil.move(file_path, destination)
